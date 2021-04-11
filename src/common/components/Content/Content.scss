@@ -1,0 +1,55 @@
+@import "../../styles/colors";
+
+.content {
+    width:100%;
+    overflow: auto;
+    background-color: $light_orange;
+    padding: 10px;
+
+    .recipe-heading {
+        background-color: $highlight_orange;
+        color: $white;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5px;
+        display:flex;
+        justify-content: space-between;
+    
+        .recipe-title {
+            display: flex;
+
+            input {
+                border-radius: 4px;
+                border: 1px solid $highlight_orange;
+            }
+        
+            span {
+                margin: 2px 0px 0px 5px;
+            }
+        }
+    
+        .pencil-icon, .save-icon {
+            height: 18px;
+            margin: 0px 10px 0px 10px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        
+        .cross-icon, .save-icon {
+            height: 18px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .recipe-image {
+        border: 1px solid $highlight_orange;
+        border-radius: 4px;
+        margin: 10px 0px;
+    }
+}

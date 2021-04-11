@@ -1,0 +1,77 @@
+@import "./common/styles/colors";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+div#root {
+  height: 100%;
+  overflow: hidden;
+
+  .app-container {
+    height: 100%;
+    
+    .header {
+      height: 80px;
+    }
+
+    .main-container {
+      display:flex;
+      height: calc(100% - 80px);
+
+      .nav-bar-container {
+        width: 200px;
+        height: 100%;
+        background-color: $highlight_orange;
+        color: $white;
+
+        ul {
+          list-style-type:none;
+  
+          li {
+              padding-bottom: 10px;
+              
+              &:hover {
+                  cursor: pointer;
+              }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Conditional styles based on screensize
+@media screen and (max-width: 480px) {
+  .logo-image {
+       height: 40px;
+       padding-left: 10px;
+       padding-top: 20px;
+  }
+
+  .recipe-image {
+      width: 100%
+  }
+
+  .nav-bar-content {
+      padding: 0px;
+
+      ul {
+          padding-inline-start: 2.4rem;
+      }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .logo-image {
+      height: 70px;
+      padding-top: 5px;
+      padding-left: 10px;
+  }
+
+  .nav-bar-content {
+      padding: 0px 10px 0px 10px
+  }
+}
